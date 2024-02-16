@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator_first</title>
+	<style type="text/css">
+		.main-div{
+			width: 100%;
+			height: 100vh;
+			background-color: lightgrey;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			box-shadow: 4px 4px 8px 8px black;
+			width: 250px;
+			height: 400px;
+			margin: 4px;
+			border-color: none;
+			padding-top: 20px;
+			border-radius: 25px;
+			text-align: center;
+			padding-top: 0px;
+/*			background-color: lightskyblue;*/
+
+		}
+		.chead{
+			font-family: algerian;
+			font-size: 25px;
+			letter-spacing: 2px;
+			color: black;
+		}
+		input{
+			height: 40px;
+			width: 40px;
+			margin: 4px;
+			margin-top: 8px;
+			text-align: center;
+			border-radius: 5px;
+			font-family: Arial black;
+			font-size: 15px;
+			cursor: pointer;
+		}
+
+		.op{
+			background-color: transparent;
+			text-align: right;
+			width: 80%;
+			margin-top: -13px;
+			border-radius: 10px;
+			border-color: #ed5818;
+		}
+		.eql{
+			width: 92px;
+			margin-left: 2px;
+			background-color: #f5ad3b;
+		}
+		.eql:hover{
+			background-color: skyblue;
+		}
+
+		.operator{
+			background-color: #f5ad3b;
+		}
+		.operator:hover{
+			background-color: yellow;
+		}
+	</style>
+
+	
+</head>
+<body>
+	<div class="main-div">
+		<div class="container">
+			<h3 class="chead">CALCULATOR</h3>
+			<form>
+				<div>
+					<input type="text" name="op" disabled class="op">
+				</div>
+
+				
+				
+
+				
+
+				<div class="inner">
+					<input type="button" name="C" value="C" onclick="op.value=op.value.toString().slice(0,-1)" class="operator" id="reducesize">
+					<input type="button" name="alcr" value="AC" onclick="op.value='' " class="operator">
+					<input type="button" name="div" value="/" onclick="op.value+='/' " class="operator">
+					<input type="button" name="mod" value="%" class="operator" onclick="op.value+='%'" class="operator">
+				</div>
+
+				<div>
+					<input type="button" name="num" value="9" onclick="op.value+='9' ">
+					<input type="button" name="num" value="8" onclick="op.value+='8' ">
+					<input type="button" name="num" value="7" onclick="op.value+='7' ">
+					<input type="button" name="num" value="+" onclick="op.value+='+' " class="operator">
+				</div>
+
+				<div>
+					<input type="button" name="num" value="6" onclick="op.value+='6' ">
+					<input type="button" name="num" value="5" onclick="op.value+='5' ">
+					<input type="button" name="num" value="4" onclick="op.value+='4' ">
+					<input type="button" name="num" value="-" onclick="op.value+='-'" class="operator">
+				</div>
+
+				<div>
+					<input type="button" name="num" value="3" onclick="op.value+='3' ">
+					<input type="button" name="num" value="2" onclick="op.value+='2' ">
+					<input type="button" name="num" value="1" onclick="op.value+='1' ">
+					<input type="button" name="num" value="*" onclick="op.value+='*' " class="operator">
+				</div>
+
+				<div>
+					<input type="button" name="num" value="0" onclick="op.value+='0'">
+					<input type="button" name="dot" value="." onclick="op.value+='.'">
+					<input type="button" name="eq" value="=" onclick="op.value=eval(op.value)" class="eql">
+				</div>
+
+			</form>
+			
+		</div>
+		
+	</div>
+</body>
+</html>
